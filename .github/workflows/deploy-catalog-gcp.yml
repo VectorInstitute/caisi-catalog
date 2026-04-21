@@ -1,4 +1,4 @@
-name: Deploy Catalog to GCP
+name: Deploy CAISI Catalog (Cloud Run)
 
 on:
   push:
@@ -17,12 +17,19 @@ on:
     branches:
       - main
 
+env:
+  PROJECT_ID: coderd
+  GAR_LOCATION: us-central1
+  REPOSITORY: catalog
+  SERVICE_NAME: caisi-catalog
+  REGION: us-central1
+
 permissions:
   contents: read
   id-token: write
 
 concurrency:
-  group: "gcp-catalog-deploy"
+  group: "cloud-run-caisi-catalog"
   cancel-in-progress: false
 
 jobs:
@@ -33,13 +40,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: catalog/package-lock.json
 
       - name: Install uv
         uses: astral-sh/setup-uv@v7
@@ -53,66 +53,78 @@ jobs:
           python-version: '3.12'
 
       - name: Install Python dependencies
-        run: uv pip install --system pyyaml requests
+        run: uv pip install --system pyyaml
 
       - name: Sync YAML repositories to JSON
         run: python scripts/sync_repositories_to_json.py
 
-      - name: Install Node dependencies
-        working-directory: catalog
-        run: npm ci
-
-      - name: Build Next.js site
-        working-directory: catalog
-        run: npm run build
-        env:
-          NODE_ENV: production
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
 
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v3
         with:
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+          token_format: access_token
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v3
 
-      - name: Deploy to GCS
+      - name: Configure Docker for Artifact Registry
+        run: gcloud auth configure-docker ${{ env.GAR_LOCATION }}-docker.pkg.dev --quiet
+
+      - name: Ensure Artifact Registry repository exists
         run: |
-          gcloud storage rsync \
-            --recursive \
-            --delete-unmatched-destination-objects \
-            catalog/out/ \
-            gs://${{ secrets.GCS_BUCKET }}/
+          if ! gcloud artifacts repositories describe ${{ env.REPOSITORY }} \
+            --location=${{ env.GAR_LOCATION }} --format="get(name)" 2>/dev/null; then
+            gcloud artifacts repositories create ${{ env.REPOSITORY }} \
+              --repository-format=docker \
+              --location=${{ env.GAR_LOCATION }} \
+              --description="Docker repository for Catalog services"
+          fi
 
-      - name: Set cache headers for static assets
+      - name: Build and push Docker image
+        id: build
         run: |
-          gcloud storage objects update "gs://${{ secrets.GCS_BUCKET }}/_next/static/**" \
-            --cache-control="public, max-age=31536000, immutable" \
-            --recursive || true
+          IMAGE="${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE_NAME }}:${{ github.sha }}"
 
-          gcloud storage objects update "gs://${{ secrets.GCS_BUCKET }}/_next/**" \
-            --cache-control="public, max-age=3600" \
-            --recursive || true
+          docker build \
+            -t "$IMAGE" \
+            --cache-from type=gha,scope=${{ env.SERVICE_NAME }} \
+            --cache-to type=gha,mode=max,scope=${{ env.SERVICE_NAME }} \
+            catalog/
 
-          gcloud storage objects update "gs://${{ secrets.GCS_BUCKET }}/**.html" \
-            --cache-control="public, max-age=300, must-revalidate" \
-            --recursive || true
+          docker push "$IMAGE"
+          echo "image=$IMAGE" >> $GITHUB_OUTPUT
 
-          gcloud storage objects update "gs://${{ secrets.GCS_BUCKET }}/index.html" \
-            --cache-control="public, max-age=60, must-revalidate" || true
-
-      - name: Set content types
+      - name: Deploy to Cloud Run
+        id: deploy
         run: |
-          gcloud storage objects update "gs://${{ secrets.GCS_BUCKET }}/**.json" \
-            --content-type="application/json" \
-            --recursive || true
+          gcloud run deploy ${{ env.SERVICE_NAME }} \
+            --image ${{ steps.build.outputs.image }} \
+            --region ${{ env.REGION }} \
+            --platform managed \
+            --allow-unauthenticated \
+            --memory=512Mi \
+            --cpu=1 \
+            --timeout=60s \
+            --max-instances=5 \
+            --min-instances=0 \
+            --concurrency=80 \
+            --port=8080 \
+            --update-labels="deployed-by=github-actions,commit=${{ github.sha }}" \
+            --quiet
 
-          gcloud storage objects update "gs://${{ secrets.GCS_BUCKET }}/**.xml" \
-            --content-type="application/xml" \
-            --recursive || true
+          URL=$(gcloud run services describe ${{ env.SERVICE_NAME }} \
+            --region ${{ env.REGION }} \
+            --format 'value(status.url)')
+          echo "url=$URL" >> $GITHUB_OUTPUT
 
       - name: Deployment summary
         run: |
-          echo "✅ CAISI Catalog deployed successfully to GCS!"
-          echo "📦 Bucket: gs://${{ secrets.GCS_BUCKET }}"
+          echo "## CAISI Catalog Deployed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**URL:** ${{ steps.deploy.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit:** \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Region:** ${{ env.REGION }}" >> $GITHUB_STEP_SUMMARY
