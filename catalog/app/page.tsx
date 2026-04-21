@@ -122,7 +122,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800 py-12 mt-0">
+      <footer className="bg-white border-t border-gray-100 py-12 mt-0">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col items-center gap-4">
             <Image
@@ -133,10 +133,10 @@ export default function Home() {
               className="h-9 w-auto opacity-90"
             />
             <div className="h-px w-24 bg-gradient-to-r from-caisi-purple to-caisi-cyan opacity-40" />
-            <p className="text-gray-500 dark:text-gray-400 text-sm text-center">
+            <p className="text-gray-500 text-sm text-center">
               © {new Date().getFullYear()} Canadian AI Safety Institute Research Program at CIFAR. All rights reserved.
             </p>
-            <p className="text-gray-400 dark:text-gray-500 text-xs text-center">
+            <p className="text-gray-400 text-xs text-center">
               Last updated: {new Date(data.lastUpdated).toISOString().split('T')[0]}
             </p>
           </div>

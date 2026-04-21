@@ -22,7 +22,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/85 dark:bg-gray-950/85 backdrop-blur-md border-b border-gray-200/80 dark:border-gray-800/80">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/80 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -33,11 +33,11 @@ export default function Navigation() {
             <Image
               src={getAssetPath("caisi-logo.svg")}
               alt="CAISI Research Program"
-              width={160}
-              height={32}
-              className="h-8 w-auto"
+              width={180}
+              height={36}
+              className="h-9 w-auto"
             />
-            <span className="hidden md:inline text-base font-semibold text-gray-900 dark:text-white border-l border-gray-200 dark:border-gray-700 pl-3 ml-1">
+            <span className="hidden md:inline text-base font-semibold text-gray-800 border-l border-gray-200 pl-3 ml-1">
               Research Catalog
             </span>
           </Link>
@@ -49,7 +49,7 @@ export default function Navigation() {
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
                 isActive("/")
                   ? "bg-caisi-purple text-white shadow-sm"
-                  : "text-gray-700 dark:text-gray-300 hover:bg-caisi-purple/10 hover:text-caisi-purple dark:hover:bg-caisi-purple/20"
+                  : "text-gray-700 hover:bg-caisi-purple/10 hover:text-caisi-purple"
               }`}
             >
               <Home className="w-4 h-4" />
