@@ -28,7 +28,6 @@ Thumbs.db
 *.swo
 
 # uv
-.python-version
 
 # Brand assets (binary files, SVGs are copied to catalog/public/)
 CAISI-Brand-Guide-and-Logos/
