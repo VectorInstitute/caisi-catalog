@@ -1,0 +1,19 @@
+name: mmlu-pro
+repo_id: TIGER-AI-Lab/MMLU-Pro
+description: "MMLU-Pro extends the MMLU benchmark with more challenging, reasoning-focused questions and an expanded ten-option choice set to better differentiate advanced models."
+implementations:
+  - name: MMLU-Pro Evaluation Code
+    url: https://github.com/TIGER-AI-Lab/MMLU-Pro
+  - name: MMLU-Pro Leaderboard
+    url: https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro
+public_datasets:
+  - name: MMLU-Pro Dataset
+    url: https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro
+type: applied-research
+year: 2024
+github_url: https://github.com/TIGER-AI-Lab/MMLU-Pro
+paper_url: https://arxiv.org/abs/2406.01574
+tags:
+  - benchmark
+  - text
+  - language model

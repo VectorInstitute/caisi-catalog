@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+.venv/
+
+# Build outputs
+catalog/out/
+catalog/.next/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# uv
+.python-version
+
+# Brand assets (binary files, SVGs are copied to catalog/public/)
+CAISI-Brand-Guide-and-Logos/

@@ -1,0 +1,15 @@
+name: osworld-verified
+repo_id: xlang-ai/OSWorld
+description: "OSWorld is a scalable computer environment that enables multimodal agents to perform, evaluate, and learn open-ended tasks across multiple operating systems."
+implementations:
+  - name: OSWorld (Original)
+    url: https://os-world.github.io/
+  - name: OSWorld Verified (Updated)
+    url: https://xlang.ai/blog/osworld-verified
+type: applied-research
+year: 2025
+github_url: https://github.com/xlang-ai/OSWorld
+paper_url: https://arxiv.org/abs/2404.07972
+tags:
+  - benchmark
+  - multimodal agent

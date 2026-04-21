@@ -1,0 +1,7 @@
+[files]
+extend-exclude = [
+    "catalog/public/data/*.json",
+    "catalog/public/data/papers.bib",
+    "uv.lock",
+    "CAISI-Brand-Guide-and-Logos/",
+]

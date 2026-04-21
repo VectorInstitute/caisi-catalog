@@ -1,0 +1,115 @@
+{
+  "repositories": [
+    {
+      "name": "osworld-verified",
+      "repo_id": "xlang-ai/OSWorld",
+      "description": "OSWorld is a scalable computer environment that enables multimodal agents to perform, evaluate, and learn open-ended tasks across multiple operating systems.",
+      "implementations": [
+        {
+          "name": "OSWorld (Original)",
+          "url": "https://os-world.github.io/"
+        },
+        {
+          "name": "OSWorld Verified (Updated)",
+          "url": "https://xlang.ai/blog/osworld-verified"
+        }
+      ],
+      "type": "applied-research",
+      "year": 2025,
+      "github_url": "https://github.com/xlang-ai/OSWorld",
+      "paper_url": "https://arxiv.org/abs/2404.07972",
+      "tags": [
+        "benchmark",
+        "multimodal agent"
+      ]
+    },
+    {
+      "name": "mmlu-pro",
+      "repo_id": "TIGER-AI-Lab/MMLU-Pro",
+      "description": "MMLU-Pro extends the MMLU benchmark with more challenging, reasoning-focused questions and an expanded ten-option choice set to better differentiate advanced models.",
+      "implementations": [
+        {
+          "name": "MMLU-Pro Evaluation Code",
+          "url": "https://github.com/TIGER-AI-Lab/MMLU-Pro"
+        },
+        {
+          "name": "MMLU-Pro Leaderboard",
+          "url": "https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro"
+        }
+      ],
+      "public_datasets": [
+        {
+          "name": "MMLU-Pro Dataset",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro"
+        }
+      ],
+      "type": "applied-research",
+      "year": 2024,
+      "github_url": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
+      "paper_url": "https://arxiv.org/abs/2406.01574",
+      "tags": [
+        "benchmark",
+        "text",
+        "language model"
+      ]
+    },
+    {
+      "name": "uk-aisi-inspect-evals",
+      "repo_id": "UKGovernmentBEIS/inspect_evals",
+      "description": "Inspect Evals is a repository of community-contributed evaluations featuring implementations of many popular benchmarks and papers for assessing AI capabilities and safety.",
+      "implementations": [
+        {
+          "name": "Inspect Eval Framework",
+          "url": "https://inspect.aisi.org.uk/evals/"
+        },
+        {
+          "name": "Project Website",
+          "url": "https://ukgovernmentbeis.github.io/inspect_evals/"
+        }
+      ],
+      "type": "tool",
+      "year": 2024,
+      "github_url": "https://github.com/UKGovernmentBEIS/inspect_evals/tree/main",
+      "paper_url": "https://www.aisi.gov.uk/blog/inspect-evals",
+      "tags": [
+        "benchmark",
+        "language model",
+        "agent",
+        "coding",
+        "mathematics",
+        "cybersecurity",
+        "safeguards",
+        "reasoning",
+        "general knowledge"
+      ]
+    },
+    {
+      "name": "cifar-datasets",
+      "repo_id": null,
+      "description": "The CIFAR-10 and CIFAR-100 datasets are labeled subsets of the 80 million tiny images dataset, widely used for benchmarking image classification models.",
+      "implementations": [
+        {
+          "name": "CIFAR-10 and CIFAR-100 Datasets",
+          "url": "https://www.cs.toronto.edu/~kriz/cifar.html"
+        }
+      ],
+      "public_datasets": [
+        {
+          "name": "CIFAR-10 and CIFAR-100",
+          "url": "https://www.cs.toronto.edu/~kriz/cifar.html"
+        }
+      ],
+      "type": "applied-research",
+      "year": 2009,
+      "github_url": null,
+      "paper_url": "https://www.cs.utoronto.ca/~kriz/learning-features-2009-TR.pdf",
+      "tags": [
+        "dataset",
+        "images"
+      ]
+    }
+  ],
+  "totalImplementations": 7,
+  "yearsOfResearch": 3,
+  "lastUpdated": "2026-04-21T09:26:31.048846"
+}

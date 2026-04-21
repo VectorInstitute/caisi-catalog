@@ -1,0 +1,118 @@
+name: Deploy Catalog to GCP
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'catalog/**'
+      - 'repositories/**'
+      - 'scripts/sync_repositories_to_json.py'
+      - '.github/workflows/deploy-catalog-gcp.yml'
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Collect GitHub Metrics"]
+    types:
+      - completed
+    branches:
+      - main
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: "gcp-catalog-deploy"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: catalog/package-lock.json
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.9.11"
+          enable-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: uv pip install --system pyyaml requests
+
+      - name: Sync YAML repositories to JSON
+        run: python scripts/sync_repositories_to_json.py
+
+      - name: Install Node dependencies
+        working-directory: catalog
+        run: npm ci
+
+      - name: Build Next.js site
+        working-directory: catalog
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v3
+
+      - name: Deploy to GCS
+        run: |
+          gcloud storage rsync \
+            --recursive \
+            --delete-unmatched-destination-objects \
+            catalog/out/ \
+            gs://${{ secrets.GCS_BUCKET }}/
+
+      - name: Set cache headers for static assets
+        run: |
+          gcloud storage objects update "gs://${{ secrets.GCS_BUCKET }}/_next/static/**" \
+            --cache-control="public, max-age=31536000, immutable" \
+            --recursive || true
+
+          gcloud storage objects update "gs://${{ secrets.GCS_BUCKET }}/_next/**" \
+            --cache-control="public, max-age=3600" \
+            --recursive || true
+
+          gcloud storage objects update "gs://${{ secrets.GCS_BUCKET }}/**.html" \
+            --cache-control="public, max-age=300, must-revalidate" \
+            --recursive || true
+
+          gcloud storage objects update "gs://${{ secrets.GCS_BUCKET }}/index.html" \
+            --cache-control="public, max-age=60, must-revalidate" || true
+
+      - name: Set content types
+        run: |
+          gcloud storage objects update "gs://${{ secrets.GCS_BUCKET }}/**.json" \
+            --content-type="application/json" \
+            --recursive || true
+
+          gcloud storage objects update "gs://${{ secrets.GCS_BUCKET }}/**.xml" \
+            --content-type="application/xml" \
+            --recursive || true
+
+      - name: Deployment summary
+        run: |
+          echo "✅ CAISI Catalog deployed successfully to GCS!"
+          echo "📦 Bucket: gs://${{ secrets.GCS_BUCKET }}"

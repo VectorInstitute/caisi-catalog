@@ -1,0 +1,22 @@
+name: uk-aisi-inspect-evals
+repo_id: UKGovernmentBEIS/inspect_evals
+description: "Inspect Evals is a repository of community-contributed evaluations featuring implementations of many popular benchmarks and papers for assessing AI capabilities and safety."
+implementations:
+  - name: Inspect Eval Framework
+    url: https://inspect.aisi.org.uk/evals/
+  - name: Project Website
+    url: https://ukgovernmentbeis.github.io/inspect_evals/
+type: tool
+year: 2024
+github_url: https://github.com/UKGovernmentBEIS/inspect_evals/tree/main
+paper_url: https://www.aisi.gov.uk/blog/inspect-evals
+tags:
+  - benchmark
+  - language model
+  - agent
+  - coding
+  - mathematics
+  - cybersecurity
+  - safeguards
+  - reasoning
+  - general knowledge
