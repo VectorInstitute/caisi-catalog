@@ -38,7 +38,7 @@ export default function Navigation() {
               className="h-9 w-auto"
             />
             <span className="hidden md:inline text-base font-semibold text-gray-800 border-l border-gray-200 pl-3 ml-1">
-              Research Catalog
+              CAISI Repository
             </span>
           </Link>
 
