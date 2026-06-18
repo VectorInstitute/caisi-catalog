@@ -56,7 +56,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white tracking-tight">
                 Browse{" "}
                 <span className="bg-gradient-to-r from-caisi-purple to-caisi-purple-tint bg-clip-text text-transparent">
-                  Research
+                  Resources
                 </span>
               </h2>
               <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto font-medium">
