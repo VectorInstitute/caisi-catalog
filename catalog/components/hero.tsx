@@ -125,9 +125,9 @@ export default function Hero({ totalImplementations, yearsOfResearch }: HeroProp
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 leading-tight tracking-tight"
         >
-          Research{" "}
+          CAISI{" "}
           <span className="bg-gradient-to-r from-caisi-purple to-caisi-cyan bg-clip-text text-transparent">
-            Catalog
+            Repository
           </span>
         </motion.h1>
 
@@ -138,7 +138,7 @@ export default function Hero({ totalImplementations, yearsOfResearch }: HeroProp
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg md:text-xl mb-12 text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium"
         >
-          Explore AI safety research implementations from the Canadian AI Safety Institute Research Program at CIFAR
+          Explore a curated catalogue of AI safety research and tools from the Canadian AI Safety Institute, CIFAR, NRC and Canada’s national AI ecosystem (Amii, Mila, Vector Institute)
         </motion.p>
 
         {/* Stats */}
@@ -178,7 +178,7 @@ export default function Hero({ totalImplementations, yearsOfResearch }: HeroProp
           whileTap={{ scale: 0.95 }}
           className="inline-flex items-center gap-2 bg-gradient-to-r from-caisi-purple to-caisi-purple-tint hover:from-caisi-purple-shade hover:to-caisi-purple text-white px-10 py-4 rounded-full font-semibold text-lg shadow-lg shadow-caisi-purple/25 transition-all mb-8"
         >
-          Browse Research
+          Browse Resources
           <ArrowDown className="w-5 h-5 animate-bounce" />
         </motion.a>
 
