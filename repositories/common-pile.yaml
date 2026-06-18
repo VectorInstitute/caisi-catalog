@@ -1,0 +1,15 @@
+name: common-pile
+repo_id: common-pile
+description: "Common Pile is a large collection of text data."
+implementations:
+  - name: Hugging Face Organization
+    url: https://huggingface.co/common-pile
+year: 2025
+paper_url: https://arxiv.org/abs/2506.05209
+type: tool
+tags:
+  - pretraining
+  - dataset
+  - text corpus
+  - open data
+  - language model

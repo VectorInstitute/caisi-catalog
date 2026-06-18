@@ -1,0 +1,15 @@
+name: fineweb2
+repo_id: HuggingFaceFW/fineweb-2
+description: "FineWeb2 is the second version of the large web dataset."
+implementations:
+  - name: Hugging Face Dataset
+    url: https://huggingface.co/datasets/HuggingFaceFW/fineweb-2
+year: 2025
+paper_url: https://arxiv.org/abs/2506.20920
+type: tool
+tags:
+  - web data
+  - pretraining
+  - dataset
+  - multilingual
+  - language model

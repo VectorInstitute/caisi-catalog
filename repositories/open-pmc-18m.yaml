@@ -1,0 +1,16 @@
+name: open-pmc-18m
+repo_id: vector-institute/open-pmc-18m
+description: "Open-PMC-18M is a large-scale, high-fidelity biomedical dataset comprising 18 million image-text pairs curated using transformer-based subfigure detection and contextual text enrichment."
+implementations:
+  - name: Hugging Face Dataset
+    url: https://huggingface.co/datasets/vector-institute/open-pmc-18m
+year: 2025
+paper_url: https://arxiv.org/abs/2506.02738
+
+type: tool
+tags:
+  - biomedical
+  - image-text
+  - dataset
+  - vision-language
+  - multimodal

@@ -1,0 +1,13 @@
+name: carla
+repo_id: charmlab/recourse_benchmarks
+description: "CARLA is a Python library for benchmarking counterfactual explanation methods across different datasets and machine learning models."
+type: tool
+year: 2021
+github_url: https://github.com/charmlab/recourse_benchmarks
+paper_url: https://arxiv.org/abs/2108.00783
+tags:
+  - counterfactual explanations
+  - explainability
+  - recourse
+  - benchmark
+  - machine learning

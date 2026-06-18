@@ -1,0 +1,14 @@
+name: vldbench
+description: "VLDBench is the first large-scale, human-verified benchmark for disinformation detection spanning both text-only and image-text formats."
+implementations:
+  - name: Project Website
+    url: https://vectorinstitute.github.io/VLDBench/
+type: tool
+year: 2025
+paper_url: https://arxiv.org/abs/2502.11361
+tags:
+  - disinformation
+  - benchmark
+  - multimodal
+  - vision-language
+  - fact verification

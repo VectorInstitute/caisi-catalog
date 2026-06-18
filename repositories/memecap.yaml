@@ -1,0 +1,13 @@
+name: memecap
+repo_id: eujhwang/meme-cap
+description: "Memecap is a dataset for meme captioning."
+type: tool
+year: 2023
+github_url: https://github.com/eujhwang/meme-cap
+paper_url: https://arxiv.org/abs/2305.13703
+tags:
+  - meme
+  - captioning
+  - dataset
+  - multimodal
+  - vision-language

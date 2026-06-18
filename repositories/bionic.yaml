@@ -1,0 +1,13 @@
+name: bionic
+repo_id: bowang-lab/BIONIC
+description: "BIONIC is an evaluation framework for bioinformatics and network analysis."
+type: applied-research
+year: 2022
+github_url: https://github.com/bowang-lab/BIONIC
+paper_url: https://www.nature.com/articles/s41592-022-01616-x
+tags:
+  - bioinformatics
+  - network analysis
+  - graph neural network
+  - biology
+  - representation learning

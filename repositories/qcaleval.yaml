@@ -1,0 +1,13 @@
+name: qcaleval
+repo_id: nvidia/QCalEval
+description: "QCalEval is a benchmark for quantum calibration evaluation."
+type: tool
+year: 2026
+github_url: https://github.com/nvidia/QCalEval
+paper_url: https://research.nvidia.com/publication/2026-04_qcaleval-benchmarking-vision-language-models-quantum-calibration-plot
+tags:
+  - quantum
+  - calibration
+  - benchmark
+  - evaluation
+  - physics

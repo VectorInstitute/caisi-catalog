@@ -1,0 +1,15 @@
+name: polyguard
+repo_id: AI-Secure/PolyGuard
+description: "PolyGuard is the first massive multi-domain safety policy-grounded guardrail dataset designed to ensure LLM content safety."
+implementations:
+  - name: Hugging Face Dataset
+    url: https://huggingface.co/datasets/AI-Secure/PolyGuard
+year: 2025
+paper_url: https://arxiv.org/abs/2506.19054
+type: tool
+tags:
+  - guardrail
+  - safety
+  - content moderation
+  - dataset
+  - language model

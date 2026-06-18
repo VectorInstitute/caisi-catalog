@@ -1,0 +1,14 @@
+name: drivinggen
+description: "DrivingGen is the first comprehensive benchmark for generative driving world models, assessing visual realism, trajectory plausibility, temporal coherence, and controllability."
+implementations:
+  - name: Project Website
+    url: https://drivinggen-bench.github.io/
+year: 2026
+paper_url: https://arxiv.org/abs/2601.01528
+type: tool
+tags:
+  - autonomous driving
+  - world models
+  - generative
+  - benchmark
+  - video

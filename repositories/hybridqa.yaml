@@ -1,0 +1,13 @@
+name: hybridqa
+repo_id: wenhuchen/HybridQA
+description: "HybridQA is a dataset of multi-hop question answering over tabular and textual data."
+type: tool
+year: 2020
+github_url: https://github.com/wenhuchen/HybridQA
+paper_url: https://arxiv.org/abs/2004.07347
+tags:
+  - question answering
+  - multi-hop
+  - table
+  - text
+  - dataset

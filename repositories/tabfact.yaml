@@ -1,0 +1,13 @@
+name: tabfact
+repo_id: wenhuchen/Table-Fact-Checking
+description: "TabFact is a large-scale dataset for table-based fact verification."
+type: tool
+year: 2019
+github_url: https://github.com/wenhuchen/Table-Fact-Checking
+paper_url: https://arxiv.org/abs/1909.02164
+tags:
+  - table
+  - fact verification
+  - dataset
+  - reasoning
+  - natural language inference

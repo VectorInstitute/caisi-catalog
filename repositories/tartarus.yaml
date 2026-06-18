@@ -1,0 +1,13 @@
+name: tartarus
+repo_id: aspuru-guzik-group/Tartarus
+description: "Tartarus provides practical and realistic benchmarks for inverse molecular design."
+type: tool
+year: 2022
+github_url: https://github.com/aspuru-guzik-group/Tartarus
+paper_url: https://arxiv.org/abs/2209.12487
+tags:
+  - molecular design
+  - inverse design
+  - chemistry
+  - benchmark
+  - drug discovery

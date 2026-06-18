@@ -1,0 +1,15 @@
+name: toksuite
+repo_id: toksuite
+description: "TokSuite is a collection of datasets related to tokenization."
+implementations:
+  - name: Hugging Face Organization
+    url: https://huggingface.co/toksuite
+year: 2025
+paper_url: https://huggingface.co/papers/2512.20757
+type: tool
+tags:
+  - tokenization
+  - dataset
+  - language model
+  - nlp
+  - preprocessing

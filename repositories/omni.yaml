@@ -1,0 +1,13 @@
+name: omni
+repo_id: jennyzzt/omni
+description: "OMNI is an open-endedness framework based on human notions of interestingness."
+type: applied-research
+year: 2023
+github_url: https://github.com/jennyzzt/omni
+paper_url: https://arxiv.org/abs/2306.01711
+tags:
+  - open-endedness
+  - interestingness
+  - reinforcement learning
+  - curriculum
+  - agent

@@ -1,0 +1,14 @@
+name: mmmu
+description: "MMMU is a Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark."
+implementations:
+  - name: Project Website
+    url: https://mmmu-benchmark.github.io/
+type: tool
+year: 2023
+paper_url: https://arxiv.org/abs/2311.16502
+tags:
+  - multimodal
+  - benchmark
+  - reasoning
+  - vision-language
+  - multidiscipline

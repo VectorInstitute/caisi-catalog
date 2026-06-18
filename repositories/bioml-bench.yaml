@@ -1,0 +1,13 @@
+name: bioml-bench
+repo_id: science-machine/biomlbench
+description: "BioML-bench is an evaluation framework for AI agents for end-to-end biomedical machine learning."
+type: tool
+github_url: https://github.com/science-machine/biomlbench
+year: 2025
+paper_url: https://www.biorxiv.org/content/10.1101/2025.09.01.673319v2
+tags:
+  - biomedical
+  - machine learning
+  - agent
+  - benchmark
+  - evaluation

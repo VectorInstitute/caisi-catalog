@@ -1,0 +1,13 @@
+name: comet-m
+repo_id: sahithyaravi/comet-m
+description: "Comet-M is a dataset for compositional event inference and related reasoning."
+type: tool
+year: 2023
+github_url: https://github.com/sahithyaravi/comet-m
+paper_url: https://arxiv.org/abs/2305.14617
+tags:
+  - commonsense
+  - event inference
+  - reasoning
+  - dataset
+  - nlp

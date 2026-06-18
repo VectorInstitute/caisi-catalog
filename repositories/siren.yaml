@@ -1,0 +1,13 @@
+name: siren
+repo_id: CSSLab/SIREN
+description: "SIREN is a lightweight guard model that uses LLM internal features to detect harmful content without modifying the underlying model."
+type: applied-research
+year: 2026
+github_url: https://github.com/CSSLab/SIREN
+paper_url: https://arxiv.org/abs/2604.18519
+tags:
+  - guard model
+  - content safety
+  - harmful content detection
+  - interpretability
+  - language model

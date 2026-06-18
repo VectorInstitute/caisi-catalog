@@ -1,0 +1,13 @@
+name: struct-iou
+repo_id: ExplorerFreda/struct-iou
+description: "STRUCT-IOU is a framework for evaluating structured Intersection over Union."
+type: tool
+year: 2024
+github_url: https://github.com/ExplorerFreda/struct-iou
+paper_url: https://home.ttic.edu/~freda/data/papers/structaiou.pdf
+tags:
+  - structured prediction
+  - evaluation metric
+  - parsing
+  - intersection over union
+  - nlp

@@ -1,0 +1,15 @@
+name: fineinstructions
+repo_id: fineinstructions
+description: "FineInstructions is a dataset for fine-tuning language models with instructions."
+implementations:
+  - name: Hugging Face Organization
+    url: https://huggingface.co/fineinstructions
+year: 2026
+paper_url: https://arxiv.org/abs/2601.22146
+type: tool
+tags:
+  - instruction tuning
+  - dataset
+  - fine-tuning
+  - language model
+  - nlp

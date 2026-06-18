@@ -1,0 +1,14 @@
+name: mmmu-pro
+description: "MMMU-Pro is an enhanced multimodal benchmark designed to assess AI model understanding capabilities."
+implementations:
+  - name: Hugging Face Space
+    url: https://huggingface.co/datasets/MMMU/MMMU_Pro
+type: tool
+year: 2024
+paper_url: https://arxiv.org/abs/2409.02813
+tags:
+  - multimodal
+  - benchmark
+  - reasoning
+  - vision-language
+  - evaluation

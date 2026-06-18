@@ -1,0 +1,14 @@
+name: logogramnlp
+description: "LogogramNLP is a benchmark for logogram natural language processing."
+implementations:
+  - name: Project Website
+    url: https://logogramnlp.github.io/
+type: tool
+year: 2024
+paper_url: https://arxiv.org/abs/2408.04628
+tags:
+  - logogram
+  - low-resource
+  - nlp
+  - benchmark
+  - ancient languages

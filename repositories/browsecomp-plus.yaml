@@ -1,0 +1,15 @@
+name: browsecomp-plus
+repo_id: Tevatron/BrowseComp-Plus
+description: "BrowseComp-Plus is a Deep-Research evaluation benchmark."
+implementations:
+  - name: Hugging Face Space
+    url: https://huggingface.co/spaces/Tevatron/BrowseComp-Plus
+year: 2025
+paper_url: https://arxiv.org/abs/2508.06600
+type: tool
+tags:
+  - deep research
+  - benchmark
+  - retrieval
+  - agent
+  - web
