@@ -1,0 +1,21 @@
+name: safety-measurements-finetuned-llms
+repo_id: null
+description: "This CAISI project conducted a multi-dimensional evaluation showing that fine-tuned models can produce incoherent generations under safety prompts, that automated safety judgments are unreliable on such outputs, and that conclusions about fine-tuning's safety impact depend on the choice of safety benchmark and evaluator."
+type: applied-research
+year: 2026
+github_url: null
+paper_url: https://arxiv.org/abs/2606.03648
+bibtex: |
+  @misc{vishnubhotla2026safetymeasurementsfinetunedllms,
+        title={Safety Measurements for Fine-tuned LLMs Should be Grounded in Capability}, 
+        author={Krishnapriya Vishnubhotla and Hillary Dawkins and Isar Nejadgholi and Svetlana Kiritchenko},
+        year={2026},
+        eprint={2606.03648},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL},
+        url={https://arxiv.org/abs/2606.03648}, 
+  }
+tags:
+  - fine-tuning
+  - safety evaluation
+  - language model

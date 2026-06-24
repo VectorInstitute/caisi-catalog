@@ -1,0 +1,31 @@
+name: fine-tuning-lowers-safety-evaluation-consistency
+repo_id: null
+description: "This CAISI project shows that fine-tuning a general-purpose LLM degrades its safety alignment even when the fine-tuning data contains no harmful content, and investigates how robust safety benchmarking is to seemingly inconsequential variations in the experimental setup. Across 150 fine-tuned model checkpoints (two base models, two fine-tuning datasets), the authors find substantial variance in safety scores due to random seed, generation temperature, and number of fine-tuning epochs, and show that 'non-refusal' and 'toxicity' are distinct concepts that should both be measured. The findings have implications for how safety evaluation results should be reported to enable meaningful comparisons."
+type: applied-research
+year: 2025
+github_url: null
+paper_url: https://aclanthology.org/2025.llmsec-1.10/
+bibtex: |
+  @inproceedings{fraser-etal-2025-fine,
+      title = "Fine-Tuning Lowers Safety and Disrupts Evaluation Consistency",
+      author = "Fraser, Kathleen C.  and
+        Dawkins, Hillary  and
+        Nejadgholi, Isar  and
+        Kiritchenko, Svetlana",
+      editor = "Derczynski, Leon  and
+        Novikova, Jekaterina  and
+        Chen, Muhao",
+      booktitle = "Proceedings of the The First Workshop on LLM Security (LLMSEC)",
+      month = aug,
+      year = "2025",
+      address = "Vienna, Austria",
+      publisher = "Association for Computational Linguistics",
+      url = "https://aclanthology.org/2025.llmsec-1.10/",
+      pages = "129--141",
+      ISBN = "979-8-89176-279-4",
+  }
+tags:
+  - llm safety
+  - fine-tuning
+  - safety evaluation
+  - reproducibility

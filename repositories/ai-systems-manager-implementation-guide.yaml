@@ -1,0 +1,17 @@
+name: ai-systems-manager-implementation-guide
+repo_id: null
+description: "This guide helps managers of AI systems implement Canada's Voluntary Code of Conduct on the Responsible Development and Management of Advanced Generative AI Systems. It provides granular, actionable practices aligned with five of the Code's six principles (Safety, Accountability, Human Oversight & Monitoring, Transparency, and Validity & Robustness), covering risk assessment, incident response, monitoring for harmful use, AI disclosure to users, and cybersecurity testing, along with a repository of related international standards and frameworks (ISO/IEC 42001, NIST AI RMF, OECD tools, EU AI Office resources, and others)."
+implementations:
+  - name: Implementation Guide for Managers of AI Systems
+    url: https://ised-isde.canada.ca/site/ised/en/implementation-guide-managers-artificial-intelligence-systems
+  - name: Voluntary Code of Conduct on Advanced Generative AI Systems
+    url: https://ised-isde.canada.ca/site/ised/en/voluntary-code-conduct-responsible-development-and-management-advanced-generative-ai-systems
+type: tool
+year: 2025
+github_url: null
+tags:
+  - governance
+  - policy
+  - generative ai
+  - risk management
+  - responsible ai

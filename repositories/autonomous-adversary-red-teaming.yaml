@@ -1,0 +1,26 @@
+name: autonomous-adversary-red-teaming
+repo_id: null
+description: "This CAISI project studies Language Model Agents (LMAs) as a primitive for augmenting red-team operations, including attack planning, adversary emulation, and multi-step lateral movement central to advanced persistent threat (APT) campaigns. Using MITRE ATT&CK, the work benchmarks LMAs across two lateral-movement scenarios in a controlled adversary-emulation environment, comparing fully autonomous execution, self-scaffolded planning, and expert-defined action plans, with outcomes verified via an LLM-as-a-Judge paradigm. This entry provides the two benchmark scenario datasets released alongside the paper."
+implementations:
+  - name: NRC Digital Repository Dataset
+    url: https://nrc-digital-repository.canada.ca/eng/view/object/?id=bbd70616-f648-41ac-a380-c96d0663c722
+type: applied-research
+year: 2026
+github_url: null
+paper_url: https://arxiv.org/abs/2605.06486
+bibtex: |
+  @misc{mamun2026autonomous,
+        title={Autonomous Adversary: Red-Teaming in the age of LLM}, 
+        author={Mohammad Mamun and Mohamed Gaber and Scott Buffett and Sherif Saad},
+        year={2026},
+        eprint={2605.06486},
+        archivePrefix={arXiv},
+        primaryClass={cs.CR},
+        url={https://arxiv.org/abs/2605.06486}, 
+  }
+tags:
+  - red-teaming
+  - llm agent
+  - cybersecurity
+  - adversarial
+  - benchmark

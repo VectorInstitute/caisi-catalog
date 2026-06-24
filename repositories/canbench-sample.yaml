@@ -1,0 +1,24 @@
+name: canbench 
+repo_id: nrcaisafety/canbench-sample
+description: "CAN-Bench is a benchmark for evaluating whether LLMs understand Government of Canada policies, perform equally well in English and French, and refuse unsafe prompts specific to federal programs, spanning knowledge, nonpartisanship, and safety question types. This is a 40-question public sample of the fully-gated benchmark, provided for tooling development and reference."
+implementations:
+  - name: Hugging Face Dataset
+    url: https://huggingface.co/datasets/nrcaisafety/canbench-sample
+type: tool
+year: 2026
+paper_url: https://nrc-publications.canada.ca/eng/view/object/?id=55be3028-79fe-48b4-b2ed-5468b1c771e0
+bibtex: |
+  @inproceedings{bernier-colborne2026canbench,
+    title     = {Towards Custom {AI} Benchmarking for the Government of Canada},
+    author    = {Bernier-Colborne, Gabriel and Gauthier, Yvan and Vajjala, Sowmya},
+    booktitle = {Proceedings of the 39th Canadian Conference on Artificial Intelligence},
+    year      = {2026},
+    note      = {National Research Council of Canada}
+  }
+tags:
+  - benchmark
+  - government
+  - nonpartisanship
+  - safety evaluation
+  - multilingual
+
