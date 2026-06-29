@@ -5,16 +5,7 @@ type: applied-research
 year: 2025
 github_url: null
 paper_url: https://arxiv.org/abs/2507.10585
-bibtex: |
-  @misc{nejadgholi2025taxonomy,
-        title={A Taxonomy for Design and Evaluation of Prompt-Based Natural Language Explanations}, 
-        author={Isar Nejadgholi and Mona Omidyeganeh and Marc-Antoine Drouin and Jonathan Boisvert},
-        year={2025},
-        eprint={2507.10585},
-        archivePrefix={arXiv},
-        primaryClass={cs.CL},
-        url={https://arxiv.org/abs/2507.10585}, 
-  }
+bibtex: nejadgholi2025taxonomy
 tags:
   - explainability
   - natural language explanation
