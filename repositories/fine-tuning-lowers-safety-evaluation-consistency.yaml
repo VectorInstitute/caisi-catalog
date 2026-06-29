@@ -5,25 +5,7 @@ type: applied-research
 year: 2025
 github_url: null
 paper_url: https://aclanthology.org/2025.llmsec-1.10/
-bibtex: |
-  @inproceedings{fraser-etal-2025-fine,
-      title = "Fine-Tuning Lowers Safety and Disrupts Evaluation Consistency",
-      author = "Fraser, Kathleen C.  and
-        Dawkins, Hillary  and
-        Nejadgholi, Isar  and
-        Kiritchenko, Svetlana",
-      editor = "Derczynski, Leon  and
-        Novikova, Jekaterina  and
-        Chen, Muhao",
-      booktitle = "Proceedings of the The First Workshop on LLM Security (LLMSEC)",
-      month = aug,
-      year = "2025",
-      address = "Vienna, Austria",
-      publisher = "Association for Computational Linguistics",
-      url = "https://aclanthology.org/2025.llmsec-1.10/",
-      pages = "129--141",
-      ISBN = "979-8-89176-279-4",
-  }
+bibtex: fraser-etal-2025-fine
 tags:
   - llm safety
   - fine-tuning
