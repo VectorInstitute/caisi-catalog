@@ -8,16 +8,7 @@ type: applied-research
 year: 2026
 github_url: null
 paper_url: https://arxiv.org/abs/2605.06486
-bibtex: |
-  @misc{mamun2026autonomous,
-        title={Autonomous Adversary: Red-Teaming in the age of LLM}, 
-        author={Mohammad Mamun and Mohamed Gaber and Scott Buffett and Sherif Saad},
-        year={2026},
-        eprint={2605.06486},
-        archivePrefix={arXiv},
-        primaryClass={cs.CR},
-        url={https://arxiv.org/abs/2605.06486}, 
-  }
+bibtex: mamun2026autonomous
 tags:
   - red-teaming
   - llm agent
