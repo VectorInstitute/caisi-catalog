@@ -978,5 +978,54 @@
       }
     },
     "last_updated": "2026-09-07T12:22:28.094895+00:00"
+  },
+  {
+    "repos": {
+      "xlang-ai/OSWorld": {
+        "name": "osworld-verified",
+        "stars": 3141,
+        "forks": 533,
+        "watchers": 32,
+        "open_issues": 204,
+        "views_total": 0,
+        "views_unique": 0,
+        "clones_total": 0,
+        "clones_unique": 0
+      },
+      "TIGER-AI-Lab/MMLU-Pro": {
+        "name": "mmlu-pro",
+        "stars": 423,
+        "forks": 55,
+        "watchers": 10,
+        "open_issues": 11,
+        "views_total": 0,
+        "views_unique": 0,
+        "clones_total": 0,
+        "clones_unique": 0
+      },
+      "UKGovernmentBEIS/inspect_evals": {
+        "name": "uk-aisi-inspect-evals",
+        "stars": 670,
+        "forks": 436,
+        "watchers": 8,
+        "open_issues": 257,
+        "views_total": 0,
+        "views_unique": 0,
+        "clones_total": 0,
+        "clones_unique": 0
+      },
+      "null": {
+        "name": "cifar-datasets",
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "open_issues": 0,
+        "views_total": 0,
+        "views_unique": 0,
+        "clones_total": 0,
+        "clones_unique": 0
+      }
+    },
+    "last_updated": "2026-09-14T12:22:12.728642+00:00"
   }
 ]
