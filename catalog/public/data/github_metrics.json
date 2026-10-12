@@ -2,8 +2,8 @@
   "repos": {
     "xlang-ai/OSWorld": {
       "name": "osworld-verified",
-      "stars": 3173,
-      "forks": 538,
+      "stars": 3198,
+      "forks": 540,
       "watchers": 32,
       "open_issues": 215,
       "views_total": 0,
@@ -13,7 +13,7 @@
     },
     "TIGER-AI-Lab/MMLU-Pro": {
       "name": "mmlu-pro",
-      "stars": 428,
+      "stars": 430,
       "forks": 58,
       "watchers": 10,
       "open_issues": 13,
@@ -24,10 +24,10 @@
     },
     "UKGovernmentBEIS/inspect_evals": {
       "name": "uk-aisi-inspect-evals",
-      "stars": 692,
-      "forks": 454,
+      "stars": 700,
+      "forks": 459,
       "watchers": 9,
-      "open_issues": 311,
+      "open_issues": 260,
       "views_total": 0,
       "views_unique": 0,
       "clones_total": 0,
@@ -45,5 +45,5 @@
       "clones_unique": 0
     }
   },
-  "last_updated": "2026-10-05T12:24:18.294215+00:00"
+  "last_updated": "2026-10-12T12:32:02.375979+00:00"
 }
