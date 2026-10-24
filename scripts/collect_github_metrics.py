@@ -11,7 +11,6 @@ import subprocess
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-
 MAX_HISTORY_ENTRIES = 400
 
 
@@ -56,11 +55,14 @@ def get_repo_info(repo_id: str) -> Optional[Dict[str, Any]]:
         Repository metadata or None on failure.
 
     """
-    data = run_gh_command([
-        "api", f"repos/{repo_id}",
-        "--jq", "{stargazers_count, forks_count, subscribers_count, open_issues_count}",
-    ])
-    return data
+    return run_gh_command(
+        [
+            "api",
+            f"repos/{repo_id}",
+            "--jq",
+            "{stargazers_count, forks_count, subscribers_count, open_issues_count}",
+        ]
+    )
 
 
 def get_traffic_views(repo_id: str) -> Optional[Dict[str, Any]]:
@@ -150,9 +152,7 @@ def collect_metrics() -> Dict[str, Any]:
     }
 
 
-def update_history(
-    current: Dict[str, Any], history_path: Path
-) -> List[Dict[str, Any]]:
+def update_history(current: Dict[str, Any], history_path: Path) -> List[Dict[str, Any]]:
     """Append current metrics to history, keeping the last MAX_HISTORY_ENTRIES.
 
     Parameters
@@ -194,12 +194,14 @@ def main() -> None:
     snapshot_path = output_dir / "github_metrics.json"
     with open(snapshot_path, "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2)
+        f.write("\n")
     print(f"Wrote snapshot to {snapshot_path}")
 
     history_path = output_dir / "github_metrics_history.json"
     history = update_history(metrics, history_path)
     with open(history_path, "w", encoding="utf-8") as f:
         json.dump(history, f, indent=2)
+        f.write("\n")
     print(f"Updated history at {history_path} ({len(history)} entries)")
 
     print("Done.")

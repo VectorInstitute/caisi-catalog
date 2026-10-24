@@ -1,4 +1,4 @@
-name: canbench 
+name: canbench
 repo_id: nrcaisafety/canbench-sample
 description: "CAN-Bench is a benchmark for evaluating whether LLMs understand Government of Canada policies, perform equally well in English and French, and refuse unsafe prompts specific to federal programs, spanning knowledge, nonpartisanship, and safety question types. This is a 40-question public sample of the fully-gated benchmark, provided for tooling development and reference."
 implementations:
@@ -14,4 +14,3 @@ tags:
   - nonpartisanship
   - safety evaluation
   - multilingual
-
